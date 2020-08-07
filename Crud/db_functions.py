@@ -37,6 +37,5 @@ def getAllMenuItems():
 def getAllMenuItemsByRestaurentId(res_id):
     return session1.query(MenuItem.name,MenuItem.price,MenuItem.description).filter_by(restaurant_id = res_id)
 
-if __name__ == __main__:
-    #print(len(getAllRestaurentNames()))
-    getAllMenuItemsByRestaurentId(4)
+#print(len(getAllRestaurentNames()))
+getAllMenuItemsByRestaurentId(4)
