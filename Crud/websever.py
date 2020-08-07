@@ -52,7 +52,7 @@ def main():
         print("Sever runing on port {}".format(port))
         server.serve_forever()
     except KeyboardInterrupt:
-        print("^C entered Stopiing the We Server")
+        print("^C entered Stopiing the Web Server")
         server.socket.close()
 
 if __name__ == '__main__':
