@@ -31,5 +31,11 @@ def renameRestaurantInDB(res_id,newName):
     session1.add(rest)
     session1.commit()
 
+def getAllMenuItems():
+    return ([menuinfo for menuinfo in session1.query(MenuItem.name,MenuItem.price,MenuItem.description)])
+
+def getAllMenuItemsByRestaurentId(res_id):
+    return session1.query(MenuItem.name,MenuItem.price,MenuItem.description).filter_by(restaurant_id = res_id)
+
 #print(len(getAllRestaurentNames()))
-#print(getAllMenuItemNames())
+getAllMenuItemsByRestaurentId(4)
